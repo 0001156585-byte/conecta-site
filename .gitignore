@@ -1,5 +1,17 @@
-node_modules
-.env
-*.bat
-dist
+# Dependências
+node_modules/
 
+# Variáveis de ambiente
+.env
+
+# Node portátil
+node.exe
+npm
+npm.cmd
+npx
+npx.cmd
+corepack
+corepack.cmd
+nodevars.bat
+node_portatil.bat
+install_tools.bat
