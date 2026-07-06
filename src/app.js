@@ -11,6 +11,7 @@ const desafioRoutes = require("./routes/desafios");
 
 app.use("/api/auth", authRoutes);
 app.use("/api/desafios", desafioRoutes);
+app.use("/equipes", require("./routes/equipes"));
 
 app.get("/", (req, res) => {
     res.send("ConectaEPT funcionando!");
