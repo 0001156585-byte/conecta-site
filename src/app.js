@@ -6,12 +6,21 @@ const app = express();
 
 app.use(express.json());
 
-const authRoutes = require("./routes/auth");
-const desafioRoutes = require("./routes/desafios");
+// Importação das rotas
+const authRoutes = require("./routes/authRoutes");
+const desafiosRoutes = require("./routes/desafiosRoutes");
+const equipeRoutes = require("./routes/equipeRoutes");
+const docentesRoutes = require("./routes/docentesRoutes");
+const avaliacaoRoutes = require("./routes/avaliacaoRoutes");
+const relatoriosRoutes = require("./routes/relatoriosRoutes");
 
+// Registro das rotas
 app.use("/api/auth", authRoutes);
-app.use("/api/desafios", desafioRoutes);
-app.use("/equipes", require("./routes/equipes"));
+app.use("/api/desafios", desafiosRoutes);
+app.use("/api/equipes", equipeRoutes);
+app.use("/api/docentes", docentesRoutes);
+app.use("/api/avaliacoes", avaliacaoRoutes);
+app.use("/api/relatorios", relatoriosRoutes);
 
 app.get("/", (req, res) => {
     res.send("ConectaEPT funcionando!");

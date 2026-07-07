@@ -11,7 +11,7 @@ router.post("/", authMiddleware, equipeController.criarEquipe);
 router.post("/:id/join", authMiddleware, equipeController.entrarNaEquipe);
 
 // Inscrever no desafio
-router.post("/:id/desafio/:desafioId", authMiddleware, equipeController.inscreverDesafio);
+//router.post("/:id/desafio/:desafioId", authMiddleware, equipeController.inscreverDesafio);
 
 // Ver equipe
 router.get("/:id", authMiddleware, equipeController.listarEquipe);
