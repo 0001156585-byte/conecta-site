@@ -31,3 +31,10 @@ exports.submeter = async (projetoId) => {
     [projetoId]
   );
 };
+
+exports.updateStatus = async (id, status) => {
+  await db.execute(
+    "UPDATE projetos SET status = ? WHERE id = ?",
+    [status, id]
+  );
+}; 

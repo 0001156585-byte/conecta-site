@@ -14,6 +14,8 @@ const docentesRoutes = require("./routes/docentesRoutes");
 const avaliacaoRoutes = require("./routes/avaliacaoRoutes");
 const relatoriosRoutes = require("./routes/relatoriosRoutes");
 
+// const painelRoutes = require("./routes/painelRoutes"); // COMENTE ESTA LINHA
+
 // Registro das rotas
 app.use("/api/auth", authRoutes);
 app.use("/api/desafios", desafiosRoutes);
@@ -21,6 +23,15 @@ app.use("/api/equipes", equipeRoutes);
 app.use("/api/docentes", docentesRoutes);
 app.use("/api/avaliacoes", avaliacaoRoutes);
 app.use("/api/relatorios", relatoriosRoutes);
+
+// app.use("/api/painel", painelRoutes); // COMENTE ESTA LINHA
+
+// ROTA DE TESTE
+app.get("/api/painel", (req, res) => {
+    res.json({
+        mensagem: "Teste do painel funcionando!"
+    });
+});
 
 app.get("/", (req, res) => {
     res.send("ConectaEPT funcionando!");
